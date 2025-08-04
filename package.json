@@ -1,0 +1,15 @@
+{
+  "name": "newshub",
+  "version": "1.0.0",
+  "description": "News website with Angular frontend and NestJS backend",
+  "scripts": {
+    "install:all": "npm install --legacy-peer-deps && cd frontend && npm install --legacy-peer-deps && cd ../backend && npm install --legacy-peer-deps",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run start:dev",
+    "build": "cd frontend && npm run build && cd ../backend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
